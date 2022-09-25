@@ -5,6 +5,7 @@ import time
 pygame.init()
 
 red = (255, 255, 255)
+green = (24, 202, 77)
 black = (0, 0 ,0 )
 size = width, height = 600, 600
 font = pygame.font.Font("/usr/share/fonts/TTF/AkaashNormal.ttf", 33)
@@ -14,9 +15,11 @@ pygame.display.set_caption("Hello mortal 😵😵😵😵😵😵😵")
 
 
 sent_list = [
-    "hello bro, welcome",
-    "How are you hope youre fine ok bro",
-    "Experiment 1"
+    "wecome to book of demon!",
+    "In this game you are trying to save the world",
+    "You have to fight and defeat demons",
+    "to save everyone",
+    "Tell me your name"
 ]
 
 
@@ -24,7 +27,7 @@ while 1:
     screen.fill(black)
     for sent in sent_list:
         screen.fill(black)
-        text = font.render(sent, True, red)
+        text = font.render(sent, True, green)
 
         text_rect = text.get_rect()
 
@@ -34,6 +37,6 @@ while 1:
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
-
-        pygame.display.update()
+            # print(event)
+        pygame.display.flip()
         time.sleep(2)
